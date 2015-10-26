@@ -20,11 +20,11 @@ void set_Grupos(int N, Grupo** G){
 
 void show_Grupos(int N, Grupo** G){
   int i, j;
-  printf("NdL\tExam\tTareas(15)\tPart(15)\tExam(70)\tFParcial\n");
+  printf("NdL\tExam\tPart(15)\tPracsYTareas(15)\tExam(70)\tFParcial\n");
   for(i=0; i<N; ++i){
     for(j=0; j<G[i]->numDD; ++j){
-      printf("%i\t%.1f\t%.1f\t\t%.1f\t\t%.1f\t\t%.1f\n",  \
-              j+1, G[i]->D[j]->calDEX, tarea[i][j], part[i][j],  \
+      printf("%i\t%.1f\t%.1f\t\t%.1f\t\t\t%.1f\t\t%.1f\n",  \
+              j+1, G[i]->D[j]->calDEX, part[i][j], tarea[i][j],  \
               .7*(G[i]->D[j]->calDEX), tarea[i][j]+part[i][j]+ \
               .7*(G[i]->D[j]->calDEX));
     }
